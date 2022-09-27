@@ -1,7 +1,10 @@
-Flask
+django
+django-heroku
+gunicorn
 sklearn
 pandas
 numpy
 seaborn
 matplotlib
 pickle
+django

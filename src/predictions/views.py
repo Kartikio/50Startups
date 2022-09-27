@@ -11,10 +11,17 @@ from .forms import PredictionForm
 import pickle
 import numpy as np
 import pandas as pd
-regmodel = pickle.load(open(
-    'C:/Users/Kartik Yanigar/Desktop/Class/50Startups/src/predictions/regmodel.pkl', 'rb'))
-scaler = pickle.load(open(
-    'C:/Users/Kartik Yanigar/Desktop/Class/50Startups/src/predictions/scaling.pkl', 'rb'))
+from pathlib import Path
+
+d = Path(__file__).parent
+d1 = d.joinpath('regmodel.pkl')
+d2 = d.joinpath('scaling.pkl')
+# regmodel = pickle.load(open(
+#     'C:/Users/Kartik Yanigar/Desktop/Class/50Startups/src/predictions/regmodel.pkl', 'rb'))
+regmodel = pickle.load(open(d1, 'rb'))
+# scaler = pickle.load(open(
+#     'C:/Users/Kartik Yanigar/Desktop/Class/50Startups/src/predictions/scaling.pkl', 'rb'))
+scaler = pickle.load(open(d2, 'rb'))
 
 
 class PredictionList(ListView):
