@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>R and D Spend - {{ object.r_and_d }}</p>
+<p> Administration Spend - {{ object.administration }}</p>
+<p>Marketing Spend - {{ object.marketing_spend }}</p>
+<p>Predicted Profit Value - {{ object.predicted_value }}</p>
+<p></p>
+<a href='{{object.list_redirect_url}}'>Redirect to list of predictions</a>
+<p></p>
+<a href='{{object.predict_form_url}}'>Want to predict values?</a>
+{% endblock %}
